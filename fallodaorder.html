@@ -2,33 +2,26 @@
 <html>
 <head>
   <title>Form Example</title>
-  <script>
-    function showHackedMessage(event) {
-      event.preventDefault();  // Prevent form submission
-      document.body.innerHTML = `
-        <h1>You are hacked</h1>
-        <img src="istockphoto-1457353108-612x612.jpg" alt="Hacker Image" style="width:300px;">
-      `;
-    }
-  </script>
+  <!-- Link to external JavaScript file -->
+  <script src="script.js" defer></script>
 </head>
 <body>
 
-<form onsubmit="showHackedMessage(event);">
-  Name: <input type="text" placeholder="Your name"><br><br>
-  Address: <input type="text" placeholder="Address"><br><br>
-  <p>Mobile no: <input type="number"></p>
-  <p>Ice cream flavour 
-    <select>
-      <option>Mango</option>
-      <option>Vanilla</option>
-      <option>Chocolate</option>
-      <option>Butter scotch</option>
-    </select>
-  </p>
-  <p>Extra choco chips: Yes <input type="radio" name="radio"> No <input type="radio" name="radio"></p>
+<form id="myForm">
+  Name: <input type="text" id="name" placeholder="Your name"><br><br>
+  Address: <input type="text" id="address" placeholder="Address"><br><br>
+  Mobile no: <input type="number" id="mobile"><br><br>
+  Ice cream flavour: 
+  <select id="flavour">
+    <option>Mango</option>
+    <option>Vanilla</option>
+    <option>Chocolate</option>
+    <option>Butter scotch</option>
+  </select><br><br>
+  Extra choco chips: Yes <input type="radio" name="chips" value="yes"> No <input type="radio" name="chips" value="no"><br><br>
   <input type="submit">
 </form>
 
 </body>
 </html>
+
